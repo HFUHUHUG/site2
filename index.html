@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Магазин & Валютный Курс</title>
+    <!-- Подключаем внешние стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Minecraft Торговая Площадка</h1>
+    <p>Официальный курс: 1 АР (Руда) = 5 Алмазов = 25 Изумрудов</p>
+</header>
+
+<div class="container">
+    <!-- Левая колонка: Обменник и Витрина товаров -->
+    <div>
+        <!-- Калькулятор валют -->
+        <div class="card" style="margin-bottom: 30px;">
+            <h2>💱 Калькулятор валюты</h2>
+            <div class="converter-grid">
+                <div>
+                    <label>Количество:</label>
+                    <input type="number" id="currency-amount" value="1" min="1" oninput="convertCurrency()">
+                </div>
+                <div>
+                    <label>Из валюты:</label>
+                    <select id="currency-from" onchange="convertCurrency()">
+                        <option value="AR">АР (Алмазная руда)</option>
+                        <option value="DIA">Алмазы</option>
+                        <option value="EM">Изумруды</option>
+                    </select>
+                </div>
+                <div class="converter-equals">
+                    =
+                </div>
+                <div>
+                    <label>Результат конвертации:</label>
+                    <div id="currency-result" class="result-display" style="font-size: 16px; line-height: 1.5;">
+                        <!-- Сюда JS выведет перевод в остальные валюты -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Витрина магазинов -->
+        <div class="card">
+            <h2>🛒 Витрина товаров</h2>
+            <div class="shop-tabs" id="shop-tabs">
+                <!-- Вкладки генерируются через JS -->
+            </div>
+            <div class="products-grid" id="products-container">
+                <!-- Товары генерируются через JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Правая колонка: Корзина -->
+    <div>
+        <div class="cart-sticky-wrapper">
+            <h2>🎒 Ваша корзина</h2>
+            <div id="cart-items">
+                <p style="color: #888;">Корзина пуста</p>
+            </div>
+            
+            <div class="promo-block">
+                <input type="text" id="promo-input" placeholder="Промокод">
+                <button class="tab-btn" onclick="applyPromo()" style="padding: 10px;">ОК</button>
+            </div>
+            <div id="promo-msg"></div>
+
+            <div class="total-block">
+                Итого: <span id="cart-total" style="color: var(--accent-green);">0</span> АР
+                <div id="total-dia" style="font-size: 14px; color: var(--accent-blue); margin-top: 5px;">(0 алмазов)</div>
+                <div id="total-em" style="font-size: 14px; color: #888; font-weight: normal;">(0 изумрудов)</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Подключаем логику -->
+<script src="script.js"></script>
+</body>
+</html>
