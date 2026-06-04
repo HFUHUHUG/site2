@@ -1,28 +1,42 @@
 // НАСТРОЙКА ТОВАРОВ И ДРУГИХ МАГАЗИНОВ
 // Измените параметр enabled: true на enabled: false, чтобы зачеркнуть товар
 const shopsData = {
-    "Мой магазин": [
+        "Мой магазин": [
+        // Обычные предметы
         { id: "elytra", name: "Элитры", type: "fixed", price: 15, enabled: true },
         { id: "mending", name: "Книга: Починка", type: "fixed", price: 10, enabled: true },
         { id: "shalker", name: "Шалкер", type: "fixed", price: 8, enabled: true },
         { id: "silk", name: "Книга: Шёлковое касание", type: "fixed", price: 5, enabled: true },
         { id: "netherite", name: "Незеритовый слиток", type: "fixed", price: 15, enabled: true },
+        { id: "totem", name: "Тотем бессмертия", type: "fixed", price: 12, enabled: true }, // Добавлен тотем
         { id: "dia_armor", name: "Алмазная броня (предмет)", type: "fixed", price: 5, enabled: true },
         { id: "iron_armor", name: "Железная броня (предмет)", type: "fixed", price: 2, enabled: true },
         { id: "gold_armor", name: "Золотая броня (предмет)", type: "fixed", price: 1, enabled: true },
+        { id: "aqua_affinity", name: "Книга: Подводник", type: "fixed", price: 2, enabled: true }, // Подводник без уровней
+        { id: "infinity", name: "Книга: Бесконечность", type: "fixed", price: 1, enabled: true }, // Бесконечность без уровней
         
         // Зачарования с изменяемым уровнем (калькуляторы)
         { id: "eff", name: "Книга: Эффективность (1-10)", type: "level", base: 1, step: 5, max: 10, enabled: true },
         { id: "unb", name: "Книга: Прочность (1-10)", type: "level", base: 1, step: 3, max: 10, enabled: true },
         { id: "fire_prot", name: "Книга: Огнеупорность (1-10)", type: "level", base: 2, step: 1, max: 10, enabled: true },
-        { id: "prot", name: "Книга: Защита (1-10)", type: "level", base: 3, step: 5, max: 10, enabled: true },
         { id: "knock", name: "Книга: Отдача (1-10)", type: "level", base: 1, step: 1, max: 10, enabled: true },
         { id: "fortune", name: "Книга: Удача (1-10)", type: "level", base: 5, step: 3, max: 10, enabled: true },
         { id: "sharp", name: "Книга: Острота (1-10)", type: "level", base: 2, step: 3, max: 10, enabled: true },
         
-        // Зачеркнутые товары (по вашему ТЗ)
-        { id: "looting", name: "Книга: Добыча (1-10)", type: "level", base: 5, step: 3, max: 10, enabled: false },
-        { id: "fire_asp", name: "Книга: Заговор огня (1-10)", type: "level", base: 3, step: 2, max: 10, enabled: false }
+        // Обновленные и новые чары из вашего запроса
+        { id: "prot", name: "Книга: Защита (1-10)", type: "level", base: 5, step: 2, max: 10, enabled: true }, // Новая цена: 5 + 2 за ур.
+        { id: "fire_asp", name: "Книга: Заговор огня (1-10)", type: "level", base: 3, step: 2, max: 10, enabled: true }, // ТЕПЕРЬ ВКЛЮЧЕН (не зачёркнут)
+        { id: "riptide", name: "Книга: Тягун (1-10)", type: "level", base: 2, step: 1, max: 10, enabled: true },
+        { id: "smite", name: "Книга: Небесная кара (1-10)", type: "level", base: 3, step: 2, max: 10, enabled: true },
+        { id: "blast_prot", name: "Книга: Взрывоустойчивость (1-10)", type: "level", base: 1, step: 1, max: 10, enabled: true },
+        { id: "thorns", name: "Книга: Шипы (1-10)", type: "level", base: 3, step: 2, max: 10, enabled: true },
+        { id: "depth_strider", name: "Книга: Подводная ходьба (1-10)", type: "level", base: 3, step: 1, max: 10, enabled: true },
+        { id: "power", name: "Книга: Сила (1-10)", type: "level", base: 1, step: 1, max: 10, enabled: true },
+        { id: "sweeping", name: "Книга: Разящий клинок (1-10)", type: "level", base: 2, step: 1, max: 10, enabled: true },
+        { id: "proj_prot", name: "Книга: Защита от снарядов (1-10)", type: "level", base: 3, step: 2, max: 10, enabled: true },
+        
+        // Оставленный зачеркнутым товар
+        { id: "looting", name: "Книга: Добыча (1-10)", type: "level", base: 5, step: 3, max: 10, enabled: false }
     ],
     "Магазин Игрока_2": [
         { id: "p2_iron", name: "Железный блок", type: "fixed", price: 1, enabled: true },
