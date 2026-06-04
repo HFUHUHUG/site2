@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Магазин & Валютный Курс</title>
+    <!-- Подключаем внешние стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +15,9 @@
 </header>
 
 <div class="container">
+    <!-- Левая колонка: Обменник и Витрина товаров -->
     <div>
+        <!-- Калькулятор валют -->
         <div class="card" style="margin-bottom: 30px;">
             <h2>💱 Калькулятор валюты</h2>
             <div class="converter-grid">
@@ -30,21 +33,31 @@
                         <option value="EM">Изумруды</option>
                     </select>
                 </div>
-                <div class="converter-equals">=</div>
+                <div class="converter-equals">
+                    =
+                </div>
                 <div>
                     <label>Результат конвертации:</label>
-                    <div id="currency-result" class="result-display"></div>
+                    <div id="currency-result" class="result-display" style="font-size: 16px; line-height: 1.5;">
+                        <!-- Сюда JS выведет перевод в остальные валюты -->
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Витрина магазинов -->
         <div class="card">
             <h2>🛒 Витрина товаров</h2>
-            <div class="shop-tabs" id="shop-tabs"></div>
-            <div class="products-grid" id="products-container"></div>
+            <div class="shop-tabs" id="shop-tabs">
+                <!-- Вкладки генерируются через JS -->
+            </div>
+            <div class="products-grid" id="products-container">
+                <!-- Товары генерируются через JS -->
+            </div>
         </div>
     </div>
 
+    <!-- Правая колонка: Корзина -->
     <div>
         <div class="cart-sticky-wrapper">
             <h2>🎒 Ваша корзина</h2>
@@ -67,6 +80,7 @@
     </div>
 </div>
 
+<!-- Подключаем логику -->
 <script src="script.js"></script>
 </body>
 </html>
