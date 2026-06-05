@@ -34,6 +34,9 @@ const shopsData = {
         { id: "power", name: "Книга: Сила (1-10)", type: "level", base: 1, step: 1, max: 10, enabled: true },
         { id: "sweeping", name: "Книга: Разящий клинок (1-10)", type: "level", base: 2, step: 1, max: 10, enabled: true },
         { id: "proj_prot", name: "Книга: Защита от снарядов (1-10)", type: "level", base: 3, step: 2, max: 10, enabled: true },
+
+        //предметы
+        { id: "nether_upgrade", name: "Незеритовое улучшение", type: "fixed", price: 10, enabled: true},
         
         // Оставленный зачеркнутым товар
         { id: "looting", name: "Книга: Добыча (1-10)", type: "level", base: 5, step: 3, max: 10, enabled: false }
