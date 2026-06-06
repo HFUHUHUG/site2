@@ -40,7 +40,7 @@ const shopsData = {
         
         // Оставленный зачеркнутым товар
         { id: "looting", name: "Книга: Добыча (1-10)", type: "level", base: 15, step: 9, max: 10, enabled: false }
-        ];
+        ],
     "Магазин Игрока_2": [
         { id: "p2_iron", name: "Железный блок", type: "fixed", price: 1, enabled: true },
         { id: "p2_gold", name: "Золотой блок", type: "fixed", price: 4, enabled: true },
